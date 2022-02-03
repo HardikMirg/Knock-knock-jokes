@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     res.send("welcome to knock knock jokes")
 });
 
+const api = require('./routes/api')
+
+app.use('/api', api)
+
 app.listen(PORT, () => {
     console.log(`Server Running on http://localhost:${PORT}`)
 });
